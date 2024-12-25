@@ -1,22 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom/client"; // Correct import for ReactDOM.createRoot
 
-const parent = React.createElement(
-  "div",
-  { id: "parent" },
-  [
-    React.createElement("div", { id: "child" }, [
-      React.createElement("h1", {}, "Learn React Again 🚀"),
-      React.createElement("h2", {}, "I am h2 tags"),
-    ]),
-    React.createElement("div", { id: "child2" }, [
-      React.createElement("h1", {}, "I am h1 tags"),
-      React.createElement("h2", {}, "I am h2 tags"),
-    ]),
-  ]
+// React Element => ReactElement-JS Object => HTMLElement(render)
+const heading = React.createElement(
+    "h1",
+    {
+        id: "heading"
+    },
+    "Manish Gupta 🚀"
 );
 
-console.log(parent); // object
+console.log(heading);
 
-const root = ReactDOM.createRoot(document.getElementById("root")); // Correct usage of createRoot
-root.render(parent);
+// JSX - HTML-like or XML-like syntax
+
+// JSX (transpiled before it reaches the JS Engine) - Parcel - Bable 
+
+//JSX => React.createElement = >ReactElement-JS Object => HTMLElement(render)
+const jsxHeading = <h1 id="heading">Learning React using JSX</h1>;
+
+console.log(jsxHeading);
+
+// Correct usage of createRoot
+const root = ReactDOM.createRoot(document.getElementById("root")); 
+
+// Render the JSX element
+root.render(jsxHeading);
