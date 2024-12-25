@@ -1,0 +1,32 @@
+{
+  "name": "leaning-react",
+  "version": "1.0.0",
+  "description": "Learn React by Manish ",
+ 
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manishgupta1621/React01.git"
+  },
+  "keywords": [],
+  "author": "Manish Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manishgupta1621/React01/issues"
+  },
+  "homepage": "https://github.com/Manishgupta1621/React01#readme",
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "broswerlist" : [
+    "last 2 version"
+  ]
+  
+}
