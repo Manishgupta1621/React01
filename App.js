@@ -1,28 +1,51 @@
 import React from "react";
 import ReactDOM from "react-dom/client"; // Correct import for ReactDOM.createRoot
 
-// React Element => ReactElement-JS Object => HTMLElement(render)
-const heading = React.createElement(
-    "h1",
-    {
-        id: "heading"
-    },
-    "Manish Gupta 🚀"
+// React Element
+
+const elm = <span>React Element </span>
+
+const Title =  (
+    <h1 className="head" tbIndex="1" >
+        {elm}
+        Learning React using JSX 🚀
+    </h1>
 );
 
-console.log(heading);
 
-// JSX - HTML-like or XML-like syntax
+// const Title = () => (
+//     <h1 className="head" tbIndex="1" >
+//         Learning React using JSX 🚀
+//     </h1>
+// );
 
-// JSX (transpiled before it reaches the JS Engine) - Parcel - Bable 
+//  same tarika func likhne ka
+// const fn = () => true;
 
-//JSX => React.createElement = >ReactElement-JS Object => HTMLElement(render)
-const jsxHeading = <h1 id="heading">Learning React using JSX</h1>;
+// const fn2 = () => {
+//     return true;
+// }
+ 
 
-console.log(jsxHeading);
+// React componement
 
-// Correct usage of createRoot
-const root = ReactDOM.createRoot(document.getElementById("root")); 
+// const HeadingComponent = () =>{
+//     return <h1 class="heading" >React Function component </h1>;
+// }
 
-// Render the JSX element
-root.render(jsxHeading);
+const data = api.getdata();
+// jsx is prevent cross site scripting and sanitizie data no data can hack 
+
+const HeadingComponent = () =>(
+    <div id="container">
+        {data}
+        {Title()}
+        <Title/>
+        {<Title></Title>}
+        <h1 class="heading" >React Function component </h1>
+    </div>
+); 
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<HeadingComponent/>);
